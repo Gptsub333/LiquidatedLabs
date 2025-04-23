@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove the Google Fonts import that's causing the error */
+/* @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"); */
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Futuristic logo styling */
+.company-name {
+  letter-spacing: 0.05em;
+  font-variant-numeric: slashed-zero;
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.5), 0 0 20px rgba(147, 51, 234, 0.3);
+  animation: pulse 3s infinite alternate;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logo-container {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-container::before,
+.logo-container::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #60a5fa, #9333ea);
+  opacity: 0.7;
+  filter: blur(5px);
+  animation: float 6s infinite alternate;
+}
+
+.logo-container::before {
+  top: -5px;
+  left: 20%;
+}
+
+.logo-container::after {
+  bottom: -5px;
+  right: 20%;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.3), 0 0 20px rgba(147, 51, 234, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(96, 165, 250, 0.5), 0 0 30px rgba(147, 51, 234, 0.4);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+  }
+  100% {
+    transform: translateY(5px) scale(0.8);
+  }
+}
+
+@keyframes expand {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.animate-expand {
+  animation: expand 1.5s forwards ease-out;
+}
