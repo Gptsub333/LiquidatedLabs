@@ -38,8 +38,8 @@ export default function Contact() {
                   <p className="text-gray-400">security@liquidatedlabs.com</p>
                 </div>
               </div>
-
-              <div className="flex items-start gap-4">
+             
+              {/* <div className="flex items-start gap-4">
                 <div className="h-10 w-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400 mt-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -59,8 +59,8 @@ export default function Contact() {
                 <div>
                   <h4 className="font-medium mb-1">Phone</h4>
                   <p className="text-gray-400">+1 (555) 123-4567</p>
-                </div>
-              </div>
+                </div> 
+              </div> */}
 
               <div className="flex items-start gap-4">
                 <div className="h-10 w-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400 mt-1">
@@ -82,7 +82,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Location</h4>
-                  <p className="text-gray-400">123 Blockchain Avenue, San Francisco, CA 94105</p>
+                  <p className="text-gray-400">2517 Littlepage St, Fort Worth, Texas, 76107</p>
                 </div>
               </div>
             </div>
